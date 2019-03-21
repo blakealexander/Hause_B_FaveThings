@@ -1,2 +1,17 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+{{!-- <h1>{{title}}</h1>
+<p>Welcome to {{title}}</p> --}}
+
+<section id="heroes">
+    {{!-- for apple in fruits --}}
+    {{!-- this is a loop with handle bars and a close --}}
+    {{#each avatars}} 
+    <div class="hero-container">
+     <a href="/{{name}}">
+      <img src="/images/{{avatar}}" alt="avatar">
+     </a>
+     <h3 class="hero-name">{{name}}</h3>
+    </div>
+
+    
+    {{/each}}
+</section>
