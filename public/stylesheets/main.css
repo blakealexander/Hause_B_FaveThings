@@ -119,13 +119,12 @@ footer {
   text-align: center;
 }
 
-#heroes {
+#favs {
   text-align: center;
   margin-top: 20px;
 }
 
 .hero-container {
-  border-radius: 1rem;
   overflow: hidden;
   display: inline-block;
   text-align: center;
