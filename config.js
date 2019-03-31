@@ -3,7 +3,6 @@ const config = {
     password: "root",
     port: 8889, // for windows 3306
     host: "localhost",
-    // database: "marvelcharacters",
     database: "favthings"
 }
 

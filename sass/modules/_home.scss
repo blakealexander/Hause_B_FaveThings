@@ -46,22 +46,71 @@ main {
 
 .hero-image {
     z-index: -1;
-    -webkit-transition: opacity 2s ease-in;
-    -moz-transition: opacity 2s ease-in;
-    -o-transition: opacity 2s ease-in;
-    -ms-transition: opacity 2s ease-in;
-    transition: opacity 2s ease-in;
+
+    -webkit-animation: fadein 4s, slidein 5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 4s, slidein 5s; /* Firefox < 16 */
+     -ms-animation: fadein 4s, slidein 5s; /* Internet Explorer */
+      -o-animation: fadein 4s, slidein 5s; /* Opera < 12.1 */
+         animation: fadein 4s, slidein 5s;
+    // -webkit-transition: opacity 2s ease-in;
+    // -moz-transition: opacity 2s ease-in;
+    // -o-transition: opacity 2s ease-in;
+    // -ms-transition: opacity 2s ease-in;
+    // transition: opacity 2s ease-in;
     // background-image: url("/images/blakeBG.png"); /* The image used */
-    opacity: 0;
+    opacity: 0.5;
     background-color: transparent; /* Used if the image is unavailable */
     height: 100vh; /* You must set a specified height */
     // background-position: center; /* Center the image */
     position: absolute;
     top: 10%;
-  
+    width: 100%;
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
   }
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+}
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
 
 footer { 
     // background-color: $bg-color; 
