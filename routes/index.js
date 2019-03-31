@@ -8,13 +8,13 @@ router.get('/', function(req, res, next) {
   // to the index.hbs page, and render that (including our DB data)
 
   // make a query from the database, if query is not successful run this error.
-  connect.query(`SELECT name, avatar FROM hero`, (err, result) => {
+  connect.query(`SELECT name, image FROM hero`, (err, result) => {
     if (err) {
       throw err;
       console.log(err);
     } else {
       console.log(result);
-      res.render('index', { avatars: result }); // this gets sent to layout.hbs
+      res.render('index', { images: result }); // this gets sent to layout.hbs
     }
   });
   //res.render('index', { title: 'Express' });

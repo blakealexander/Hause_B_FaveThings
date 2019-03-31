@@ -3,41 +3,113 @@
 html { position: relative; min-height: 100%; }
 
 body { 
-    background: url(/images/dark-honeycomb.png) repeat $bg-color; 
+    // background: url(/images/blakeBG.jpg) repeat $bg-color;
+    background-color: $bg-color;
     color: $text-color; 
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 50px;
 }
 
+
+
 h1, h2, h3, h4, h5, h6 { 
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'futura';
 }
 
 header { background-color: $bg-color; }
 
-nav {
-    a { float: right; }
-    h1 { 
-        font-size: 2rem;
-        padding: 8px 20px;
-        display: inline-block; 
-    }
+// nav {
 
-    a { font-size: 1.75rem; padding: 10px 20px 0 0; }
-    a:hover { color: rgb(101, 184, 108); }
+// }
+
+main { 
+    padding: 12px 20px; 
+    // background: url(/images/blakeBG.jpg) no-repeat;
 }
 
-main { padding: 12px 20px; }
+#landingPage{
+    // background: url(/images/blakeBG.jpg) no-repeat;
+    background: cover;
+    height: 100vh;
+}
+
+.hero-image {
+    z-index: -1;
+
+    -webkit-animation: fadein 4s, slidein 5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 4s, slidein 5s; /* Firefox < 16 */
+     -ms-animation: fadein 4s, slidein 5s; /* Internet Explorer */
+      -o-animation: fadein 4s, slidein 5s; /* Opera < 12.1 */
+         animation: fadein 4s, slidein 5s;
+    // -webkit-transition: opacity 2s ease-in;
+    // -moz-transition: opacity 2s ease-in;
+    // -o-transition: opacity 2s ease-in;
+    // -ms-transition: opacity 2s ease-in;
+    // transition: opacity 2s ease-in;
+    // background-image: url("/images/blakeBG.png"); /* The image used */
+    opacity: 0.1;
+    background-color: transparent; /* Used if the image is unavailable */
+    height: 100vh; /* You must set a specified height */
+    // background-position: center; /* Center the image */
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.1; }
+}
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
 
 footer { 
-    background-color: $bg-color; 
-    position: absolute; 
-    bottom: 0; 
+    // background-color: $bg-color; 
+    // position: absolute; 
+    // bottom: 0; 
     width: 100%; 
-    height: 50px;
+    // height: 50px;
     text-align: center;
-    padding-top: 1rem;
+    // padding-top: 1rem;
 }
 
 #heroes { text-align: center; margin-top: 20px; }
@@ -71,4 +143,12 @@ footer {
 
 @media screen and (min-width: 1032px) {
     .hero-container:last-of-type { margin-bottom: 20px; }
+}
+
+.authName{
+    font-size: 4vw;
+}
+
+.pageName{
+    font-size: 6vw;
 }
